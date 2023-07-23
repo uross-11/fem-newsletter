@@ -79,6 +79,10 @@ export default function Page() {
               _before: { opacity: 0 },
               boxShadow: "0px 16px 32px 0px rgba(255, 97, 85, 0.50)",
             }}
+            _focusVisible={{
+              _before: { opacity: 0 },
+              boxShadow: "0px 16px 32px 0px rgba(255, 97, 85, 0.50)",
+            }}
             bgGradient="linear(to-b, #FF6A3A 0%, #FF527B 100%)"
             overflow="hidden"
             _before={{
