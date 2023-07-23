@@ -56,6 +56,7 @@ export default function Page() {
           mt={10}
           mb={6}
           fontWeight="bold"
+          lineHeight={{ lg: "100%" }}
         >
           Thanks for subscribing!
         </Heading>
