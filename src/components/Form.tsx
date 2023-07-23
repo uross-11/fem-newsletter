@@ -1,4 +1,3 @@
-import React from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
@@ -10,7 +9,7 @@ import FormErrorMessage from "./chakra/FormErrorMessage";
 import Input from "./chakra/Input";
 import Button from "./chakra/Button";
 import Text from "./chakra/Text";
-// import { cookies } from "next/headers";
+import { useRouter } from "next/navigation";
 
 const schema = yup.object({
   email: yup
@@ -31,11 +30,12 @@ export const Form = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({ resolver: yupResolver(schema) });
+  const router = useRouter();
 
   async function onSubmit(data: FormValues) {
     await sleep(1000);
-    alert(JSON.stringify(data, null, 2));
-    // cookies().set("email", data.email);
+    router.push("success");
+    localStorage.setItem("email", data.email);
   }
 
   return (
@@ -58,6 +58,7 @@ export const Form = () => {
           )}
         </Flex>
         <Input
+          variant="unstyled"
           type="email"
           h="3.5rem"
           mt="0.5rem"
@@ -75,6 +76,9 @@ export const Form = () => {
             _invalid: { borderColor: "fem.tomato" },
           }}
           borderRadius="0.5rem"
+          borderColor="rgba(25, 24, 43, 0.25)"
+          borderWidth="thin"
+          p="1rem"
           placeholder="email@company.com"
           {...register("email")}
         />
@@ -84,6 +88,10 @@ export const Form = () => {
           h="3.5rem"
           type="submit"
           _hover={{
+            _before: { opacity: 0 },
+            boxShadow: "0px 16px 32px 0px rgba(255, 97, 85, 0.50)",
+          }}
+          _focusVisible={{
             _before: { opacity: 0 },
             boxShadow: "0px 16px 32px 0px rgba(255, 97, 85, 0.50)",
           }}
