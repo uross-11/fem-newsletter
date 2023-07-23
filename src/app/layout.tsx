@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Providers } from "./providers";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Roboto-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Roboto-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Newsletter sign-up form with success message",
@@ -16,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Providers>{children}</Providers>
       </body>
     </html>

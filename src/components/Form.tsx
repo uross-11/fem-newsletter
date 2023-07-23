@@ -118,7 +118,7 @@ export const Form = () => {
           mb={10}
           isLoading={isSubmitting}
         >
-          <Text zIndex={1} position="relative">
+          <Text zIndex={1} fontWeight="bold" position="relative">
             Subscribe to monthly newsletter
           </Text>
         </Button>

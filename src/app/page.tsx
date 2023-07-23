@@ -60,15 +60,15 @@ export default function Home() {
           </Text>
           <VStack spacing="10px" mb={10}>
             <Flex w="full" alignItems="start" gap={4} minH="3rem">
-              <Image src="/check.svg" alt="" height={21} width={21} />
+              <Image src="/icon-list.svg" alt="" height={21} width={21} />
               Product discovery and building what matters
             </Flex>
             <Flex w="full" alignItems="start" gap={4} minH="3rem">
-              <Image src="/check.svg" alt="" height={21} width={21} />
+              <Image src="/icon-list.svg" alt="" height={21} width={21} />
               Measuring to ensure updates are a success
             </Flex>
             <Flex w="full" alignItems="start" gap={4}>
-              <Image src="/check.svg" alt="" height={21} width={21} />
+              <Image src="/icon-list.svg" alt="" height={21} width={21} />
               And much more!
             </Flex>
           </VStack>
