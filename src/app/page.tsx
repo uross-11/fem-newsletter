@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Flex
       as="main"
-      h="100vh"
+      minH="100vh"
       alignItems={{ lg: "center" }}
       justifyContent={{ lg: "center" }}
       bg={{ base: "white", lg: "#36384D" }}
@@ -20,10 +20,11 @@ export default function Home() {
         bg="white"
         h={{ base: "unset", lg: "40rem" }}
         w={{ base: "100%", lg: "58rem" }}
+        my={{ lg: "30px" }}
         borderRadius="36px"
         direction={{ base: "column", lg: "row-reverse" }}
         p={{ lg: "1.5rem 1.5rem 1.5rem 0" }}
-        boxShadow="0px 15px 60px 0px rgba(0, 0, 0, 0.25)"
+        boxShadow={{ lg: "0px 15px 60px 0px rgba(0, 0, 0, 0.25)" }}
       >
         <Box
           pos="relative"
@@ -58,7 +59,7 @@ export default function Home() {
           <Text my={6} size="md">
             Join 60,000+ product managers receiving monthly updates on:
           </Text>
-          <VStack spacing="10px" mb={10}>
+          <VStack spacing="10px" mb="22px">
             <Flex
               w="full"
               alignItems="start"

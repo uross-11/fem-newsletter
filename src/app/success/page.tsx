@@ -42,7 +42,7 @@ export default function Page() {
         borderRadius="36px"
         direction="column"
         p={{ lg: "3rem 4rem 4rem 4rem" }}
-        boxShadow="0px 15px 60px 0px rgba(0, 0, 0, 0.25)"
+        boxShadow={{ lg: "0px 15px 60px 0px rgba(0, 0, 0, 0.25)" }}
       >
         <Image
           src="/icon-success.svg"
@@ -110,7 +110,3 @@ export default function Page() {
     </Flex>
   );
 }
-
-// <Flex
-// >
-// </Flex>

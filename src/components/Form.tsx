@@ -22,26 +22,44 @@ export type FormValues = {
   email: string;
 };
 
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
 export const Form = () => {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({ resolver: yupResolver(schema) });
   const router = useRouter();
 
   async function onSubmit(data: FormValues) {
-    await sleep(1000);
-    router.push("success");
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: data.email,
+      }),
+    });
+
+    const { error } = await res.json();
+
+    if (error) {
+      setError("email", {
+        type: "400",
+        message: error,
+      });
+      return;
+    }
+
     localStorage.setItem("email", data.email);
+    router.push("success");
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
       <FormControl isInvalid={Boolean(errors.email?.message)}>
-        <Flex>
+        <Flex alignItems="end" h="32px">
           <FormLabel m="0" fontSize="xs" fontWeight="bold">
             Email address
           </FormLabel>
@@ -50,6 +68,7 @@ export const Form = () => {
             <FormErrorMessage
               m="0"
               fontSize="xs"
+              maxW="70%"
               fontWeight="bold"
               color="fem.tomato"
             >
