@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/newsletter-form-that-actually-works-with-mailchimp-api-3wIbGCZQd5](https://www.frontendmentor.io/solutions/newsletter-form-that-actually-works-with-mailchimp-api-3wIbGCZQd5)
 - Live Site URL: [https://fem-newsletter-navy.vercel.app/](https://fem-newsletter-navy.vercel.app/)
 
 ## My process
