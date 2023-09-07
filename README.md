@@ -29,8 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](https://github.com/uross-11/fem-newsletter/assets/71189996/3490cc47-15df-4bc7-853d-d067e350b059)
-
+![desktop-preview](https://github.com/uross-11/fem-newsletter/assets/71189996/515ec131-b30a-4f5e-8eac-73195949179b)
 
 ### Links
 
