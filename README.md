@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: []()
-- Live Site URL: []()
+- Live Site URL: [https://fem-newsletter-navy.vercel.app/](https://fem-newsletter-navy.vercel.app/)
 
 ## My process
 
